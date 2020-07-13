@@ -43,7 +43,7 @@ except DistributionNotFound:
     # package is not installed
     pass
 
-LDRAW_URL = 'http://www.ldraw.org/library/updates/complete.zip'
+LDRAW_URL = "http://www.ldraw.org/library/updates/complete.zip"
 LIBRARY_INIT = """\"\"\" the ldraw.library module, auto-generated \"\"\"
 __all__ = [\'colours\']
 """
@@ -51,7 +51,7 @@ __all__ = [\'colours\']
 
 def load_lib_from(fullname, library_dir):
     """ load library from a dir """
-    dot_split = fullname.split('.')
+    dot_split = fullname.split(".")
     dot_split.pop(0)
     lib_name = dot_split[-1]
     lib_dir = os.path.join(library_dir, *tuple(dot_split[:-1]))
@@ -68,12 +68,12 @@ def load_lib(library_path, fullname):
 def try_download_generate_lib():
     # Download the library and generate it, if needed
     config = get_config()
-    parts_lst_path = config['parts.lst']
+    parts_lst_path = config["parts.lst"]
     output_dir = os.path.dirname(parts_lst_path)
     if not os.path.exists(output_dir) and not os.path.exists(parts_lst_path):
         download(output_dir)
     data_dir = get_data_dir()
-    library_path = config.get('library')
+    library_path = config.get("library")
     if library_path is not None:
         generate(parts_lst_path, library_path)
         return library_path
@@ -91,13 +91,14 @@ def try_download_generate_lib():
 
 class CustomImporter:
     """ Added to sys.meta_path as an import hook """
-    virtual_module = 'ldraw.library'
+
+    virtual_module = "ldraw.library"
 
     @classmethod
     def valid_module(cls, fullname):
         if fullname.startswith(cls.virtual_module):
-            rest = fullname[len(cls.virtual_module):]
-            if not rest or rest.startswith('.'):
+            rest = fullname[len(cls.virtual_module) :]
+            if not rest or rest.startswith("."):
                 return True
 
     def find_module(self, fullname, path=None):  # pylint:disable=unused-argument
@@ -157,54 +158,52 @@ class CustomImporter:
 
 def generate(parts_lst, output_dir, force=False):
     """ main function for the library generation """
-    library_path = os.path.join(output_dir, 'library')
+    library_path = os.path.join(output_dir, "library")
     ensure_exists(library_path)
-    hash_path = os.path.join(library_path, '__hash__')
+    hash_path = os.path.join(library_path, "__hash__")
 
-    md5_parts_lst = hashlib.md5(open(parts_lst, 'rb').read()).hexdigest()
+    md5_parts_lst = hashlib.md5(open(parts_lst, "rb").read()).hexdigest()
 
     if os.path.exists(hash_path):
-        md5 = open(hash_path, 'r').read()
+        md5 = open(hash_path, "r").read()
         if md5 == md5_parts_lst and not force:
             return
 
     parts = Parts(parts_lst)
 
-    library__init__ = os.path.join(library_path, '__init__.py')
+    library__init__ = os.path.join(library_path, "__init__.py")
 
-    with open(library__init__, 'w') as library__init__:
+    with open(library__init__, "w") as library__init__:
         library__init__.write(LIBRARY_INIT)
-    shutil.copy('ldraw-license.txt', os.path.join(library_path, 'license.txt'))
+    shutil.copy("ldraw-license.txt", os.path.join(library_path, "license.txt"))
 
     gen_colours(parts, output_dir)
     gen_parts(parts, output_dir)
 
-    open(hash_path, 'w').write(md5_parts_lst)
+    open(hash_path, "w").write(md5_parts_lst)
 
 
 def download(output_dir):
     """ download complete.zip, mklist, main function"""
     tmp_ldraw = get_cache_dir()
-    parts_lst_path = os.path.join(output_dir, 'parts.lst')
+    parts_lst_path = os.path.join(output_dir, "parts.lst")
 
     retrieved = os.path.join(tmp_ldraw, "complete.zip")
 
-    print('retrieve the complete.zip from ldraw.org ...')
+    print("retrieve the complete.zip from ldraw.org ...")
     urlretrieve(LDRAW_URL, filename=retrieved)
 
-    print('unzipping the complete.zip ...')
-    zip_ref = zipfile.ZipFile(retrieved, 'r')
+    print("unzipping the complete.zip ...")
+    zip_ref = zipfile.ZipFile(retrieved, "r")
     zip_ref.extractall(tmp_ldraw)
     zip_ref.close()
 
     output_dir = ensure_exists(output_dir)
 
-    copy_tree(os.path.join(tmp_ldraw, 'ldraw'), os.path.join(output_dir))
+    copy_tree(os.path.join(tmp_ldraw, "ldraw"), os.path.join(output_dir))
 
-    print('mklist...')
-    generate_parts_lst('description',
-                       os.path.join(output_dir, 'parts'),
-                       parts_lst_path)
+    print("mklist...")
+    generate_parts_lst("description", os.path.join(output_dir, "parts"), parts_lst_path)
 
 
 if not any(isinstance(o, CustomImporter) for o in sys.meta_path):

@@ -14,14 +14,14 @@ def clean(input_string):
     :param input_string:
     :return:
     """
-    input_string = re.sub(r'\W+', '_', input_string)
-    input_string = re.sub(r'_x_', 'x', input_string)
+    input_string = re.sub(r"\W+", "_", input_string)
+    input_string = re.sub(r"_x_", "x", input_string)
     return input_string
 
 
 def camel(input_string):
     """ Returns a CamelCase string """
-    return ''.join(x for x in input_string.title() if not x.isspace())
+    return "".join(x for x in input_string.title() if not x.isspace())
 
 
 def ensure_exists(path):
@@ -34,7 +34,7 @@ def ensure_exists(path):
 
 
 # https://stackoverflow.com/a/6027615
-def flatten(input_dict, parent_key='', sep='.'):
+def flatten(input_dict, parent_key="", sep="."):
     """ flatten a dictionary """
     items = []
     for key, value in input_dict.items():
