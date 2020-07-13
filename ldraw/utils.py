@@ -3,8 +3,8 @@ Some utils functions
 """
 
 import collections
-import re
 import os
+import re
 
 
 def clean(input_string):

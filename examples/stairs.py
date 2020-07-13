@@ -24,7 +24,7 @@ from ldraw.figure import *
 from ldraw.geometry import Identity
 from ldraw.library.colours import *
 from ldraw.library.parts.arch import Arch1X6
-from ldraw.library.parts.brick import Brick2X3, Brick1X1
+from ldraw.library.parts.brick import Brick1X1, Brick2X3
 from ldraw.library.parts.minifig.accessories import ToolMagnifyingGlass
 from ldraw.library.parts.minifig.hats import TopHat
 from ldraw.library.parts.minifig.heads import HeadWithMonocle_Scar_AndMoustachePattern

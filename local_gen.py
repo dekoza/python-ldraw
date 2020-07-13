@@ -1,8 +1,8 @@
 #!/usr/bin/env python
 import os
 
+from ldraw import download, generate
 from ldraw.dirs import get_data_dir
-from ldraw import generate, download
 
 # useful for autocompletion in some IDEs
 

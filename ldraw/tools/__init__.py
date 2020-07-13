@@ -1,11 +1,10 @@
 """ Some tools to convert ldr to other formats"""
 import argparse
-
 import sys
 
 from ldraw.config import get_config
-from ldraw.parts import Part, Parts, PartError
-from ldraw.geometry import Vector, CoordinateSystem
+from ldraw.geometry import CoordinateSystem, Vector
+from ldraw.parts import Part, PartError, Parts
 
 
 def widthxheight(input_str):

@@ -2,8 +2,8 @@ import pytest
 
 from ldraw.colour import Colour
 from ldraw.figure import Person
-from ldraw.geometry import Vector, Identity
-from ldraw.pieces import Piece, Group
+from ldraw.geometry import Identity, Vector
+from ldraw.pieces import Group, Piece
 
 White = Colour(15, "White", "#FFFFFF", 255, [])
 Yellow = Colour(14, "Yellow", "#F2CD37", 255, [])

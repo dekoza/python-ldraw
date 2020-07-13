@@ -3,11 +3,9 @@ import tempfile
 
 from PIL import ImageColor
 
-from ldraw.tools import widthxheight, vector_position
+from ldraw.tools import vector_position, widthxheight
 from ldraw.writers.png import PNGArgs
 from ldraw.writers.svg import SVGArgs
-
-from tests.utils import mocked_parts_lst
 
 INPUT_PATH = "tests/test_data/car.ldr"
 

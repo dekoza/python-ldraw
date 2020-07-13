@@ -21,7 +21,7 @@ Introduction
 ------------
 
 LDraw_ is a standard format used by CAD applications that create LEGO models
-and scenes. 
+and scenes.
 
 The ``pyldraw`` package provides facilities to allow users to create LDraw scene
 descriptions using the Python_ programming language. Pieces are specified by

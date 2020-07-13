@@ -21,8 +21,8 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 # pylint: disable=invalid-name, too-few-public-methods, missing-docstring
 import copy
 import math
-from numbers import Number
 from functools import reduce
+from numbers import Number
 
 
 class MatrixError(Exception):

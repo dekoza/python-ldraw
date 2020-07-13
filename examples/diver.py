@@ -20,14 +20,14 @@ GNU General Public License for more details.
 You should have received a copy of the GNU General Public License
 along with this program.  If not, see <http://www.gnu.org/licenses/>.
 """
-from ldraw.library.colours import *
 from ldraw.figure import *
+from ldraw.library.colours import *
 from ldraw.library.parts.minifig.accessories import (
-    DiverMask,
-    HairMale,
     Airtanks,
-    Flipper,
     CameraMovie,
+    DiverMask,
+    Flipper,
+    HairMale,
 )
 from ldraw.library.parts.minifig.torsos import Torso
 from ldraw.pieces import Piece

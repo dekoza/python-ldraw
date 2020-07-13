@@ -1,11 +1,10 @@
-import tempfile
-
 import os
+import tempfile
 
 import mock
 import pytest
 
-from ldraw import download, CustomImporter
+from ldraw import CustomImporter, download
 from ldraw.colour import Colour
 
 

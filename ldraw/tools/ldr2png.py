@@ -25,19 +25,19 @@ import argparse
 from PIL import ImageColor
 
 from ldraw.tools import (
-    widthxheight,
-    vector_position,
-    get_model,
     get_coordinate_system,
+    get_model,
+    vector_position,
     verify_camera_look_at,
+    widthxheight,
 )
-from ldraw.writers.png import PNGWriter, PNGArgs
+from ldraw.writers.png import PNGArgs, PNGWriter
 
 
 def main():
     """ ldr2png main function """
     description = """Converts the LDraw file to a PNG file.
-    
+
 The image size must be specified in the format <width>x<height> where the width
 and height are measured in pixels.
 

@@ -23,7 +23,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 import argparse
 import sys
 
-from ldraw.tools import vector_position, get_model
+from ldraw.tools import get_model, vector_position
 from ldraw.writers.povray import POVRayWriter
 
 SKY_SPHERE_FORMAT_STRING = """sky_sphere {
@@ -63,7 +63,7 @@ def main():
     """ ldr2pov main function """
 
     description = """Converts the LDraw file to a POV-Ray file.
-    
+
 The camera position is a single x,y,z argument where each coordinate
 should be specified as a floating point number.
 The look at position is a single x,y,z argument where each coordinate

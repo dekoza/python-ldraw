@@ -62,11 +62,11 @@ multi_line_output = 3
 include_trailing_comma = true
 line_length = 88
 known_first_party = ["ldraw"]
-known_third_party = []
+known_third_party = ["PIL", "appdirs", "attrdict", "mklist", "mock", "numpy", "pkg_resources", "progress", "pystache", "pytest", "setuptools", "yaml"]
 
 [tool.coverage.run]
 include = ["ldraw/*"]
-omit = ["*library*"]
+omit = ["ldraw/library/*"]
 plugins = []
 
 [build-system]

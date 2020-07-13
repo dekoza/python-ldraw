@@ -19,9 +19,8 @@ You should have received a copy of the GNU General Public License
 along with this program.  If not, see <http://www.gnu.org/licenses/>.
 """
 # pylint: disable=no-name-in-module, too-few-public-methods, too-many-locals, too-many-branches
-from PIL import Image, ImageColor
 import numpy
-from PIL.ImageDraw import Draw
+from PIL import Image, ImageColor
 
 from ldraw.geometry import Vector, Vector2D
 from ldraw.writers.common import Writer

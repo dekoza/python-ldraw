@@ -28,10 +28,10 @@ from distutils.dir_util import copy_tree
 from urllib.request import urlretrieve
 
 from mklist.generate import generate_parts_lst
-from pkg_resources import get_distribution, DistributionNotFound
+from pkg_resources import DistributionNotFound, get_distribution
 
 from ldraw.config import get_config, write_config
-from ldraw.dirs import get_data_dir, get_config_dir, get_cache_dir
+from ldraw.dirs import get_cache_dir, get_config_dir, get_data_dir
 from ldraw.generation.colours import gen_colours
 from ldraw.generation.parts import gen_parts
 from ldraw.parts import Parts

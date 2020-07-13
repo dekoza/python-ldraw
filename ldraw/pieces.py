@@ -20,6 +20,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 """
 # pylint: disable=too-many-arguments, too-few-public-methods
 from functools import reduce
+
 from ldraw.geometry import Identity, Vector
 
 

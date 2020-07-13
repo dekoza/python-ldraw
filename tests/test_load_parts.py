@@ -2,7 +2,7 @@ import pytest
 from mock import patch
 
 import ldraw
-from ldraw.parts import Parts, PartError
+from ldraw.parts import PartError, Parts
 
 
 def test_load_parts():

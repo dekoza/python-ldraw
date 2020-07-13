@@ -4,8 +4,8 @@ Common code for all the Writers
 import sys
 
 from ldraw.geometry import Identity, Vector
-from ldraw.library.colours import White, Main_Colour
-from ldraw.lines import Triangle, Quadrilateral, Line
+from ldraw.library.colours import Main_Colour, White
+from ldraw.lines import Line, Quadrilateral, Triangle
 from ldraw.pieces import Piece
 
 

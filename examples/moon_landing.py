@@ -25,21 +25,20 @@ from ldraw.library.colours import *
 from ldraw.library.parts.antenna import Antenna4HWithRoundedTop
 from ldraw.library.parts.baseplate import Baseplate32X32WithCraters
 from ldraw.library.parts.brick import (
-    Brick1X2WithClassicSpaceLogoPattern,
     Brick1X1RoundWithSolidStud,
+    Brick1X2WithClassicSpaceLogoPattern,
 )
 from ldraw.library.parts.car import CarSteeringStandAndWheel_Complete_
-from ldraw.library.parts.minifig.accessories import (
-    HelmetClassicWithThickChinGuardAndVisorDimples as HelmetClassic,
-    Torch,
-    Seat2X2,
-)
+from ldraw.library.parts.minifig.accessories import Seat2X2, Torch
 from ldraw.library.parts.minifig.torsos import TorsoWithClassicSpacePattern
-from ldraw.library.parts.plate import Plate2X2WithRedWheels_Complete_, Plate2X2
-
+from ldraw.library.parts.plate import Plate2X2, Plate2X2WithRedWheels_Complete_
 from ldraw.library.parts.slope import SlopeBrick452X2
 from ldraw.library.parts.tyre import Tyre6_50X8OffsetTread
 from ldraw.pieces import Group, Piece
+
+from ldraw.library.parts.minifig.accessories import (  # isort:skip
+    HelmetClassicWithThickChinGuardAndVisorDimples as HelmetClassic,
+)
 
 figure = Person(Vector(0, 0, -10))
 print(figure.head(Yellow, 30))

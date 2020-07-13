@@ -20,16 +20,16 @@ GNU General Public License for more details.
 You should have received a copy of the GNU General Public License
 along with this program.  If not, see <http://www.gnu.org/licenses/>.
 """
-from ldraw.library.colours import *
 from ldraw.figure import *
-from ldraw.library.parts.minifig.accessories import (
-    HelmetClassicWithThickChinGuardAndVisorDimples as HelmetClassic,
-    Torch,
-    MetalDetector,
-)
+from ldraw.library.colours import *
+from ldraw.library.parts.minifig.accessories import MetalDetector, Torch
 from ldraw.library.parts.minifig.torsos import TorsoWithClassicSpacePattern
 from ldraw.library.parts.others import Baseplate16X16, Rock1X1Crystal5Point
 from ldraw.pieces import Piece
+
+from ldraw.library.parts.minifig.accessories import (  # isort:skip
+    HelmetClassicWithThickChinGuardAndVisorDimples as HelmetClassic,
+)
 
 figure = Person(Vector(0, 0, -10))
 print(figure.head(Yellow, 30))

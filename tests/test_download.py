@@ -4,7 +4,7 @@ import zipfile
 import appdirs
 from mock import *
 
-from ldraw import download, LDRAW_URL
+from ldraw import LDRAW_URL, download
 
 
 @patch("os.path.exists", side_effect=lambda s: False)

@@ -1,9 +1,9 @@
 #! /usr/bin/env python
 # coding=utf-8
 import codecs
+import os
 from distutils.core import setup
 
-import os
 from setuptools import find_packages
 
 

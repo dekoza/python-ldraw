@@ -1,8 +1,8 @@
 import os
-from os.path import join
-
 import shutil
 import tempfile
+from os.path import join
+
 import mock
 import pytest
 
@@ -56,7 +56,7 @@ def test_library_gen_import(mocked_library_path):
 
     assert Brick2X4 == "3001"
 
-    from ldraw.library.colours import Reddish_Gold, ColoursByName, ColoursByCode
+    from ldraw.library.colours import ColoursByCode, ColoursByName, Reddish_Gold
 
     expected_color = Colour(189, "Reddish_Gold", "#AC8247", 255, ["PEARLESCENT"])
 

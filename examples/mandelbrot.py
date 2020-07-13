@@ -21,18 +21,18 @@ You should have received a copy of the GNU General Public License
 along with this program.  If not, see <http://www.gnu.org/licenses/>.
 """
 from ldraw.library.colours import (
-    Blue_Violet,
+    Black,
     Blue,
+    Blue_Violet,
+    Green,
     Light_Blue,
     Light_Green,
-    Green,
-    Yellow,
-    Orange,
-    Red,
     Magenta,
+    Orange,
     Purple,
-    Black,
+    Red,
     White,
+    Yellow,
 )
 from ldraw.library.parts.others import Brick1X1
 from ldraw.pieces import *

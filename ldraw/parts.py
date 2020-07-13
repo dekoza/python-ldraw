@@ -20,9 +20,9 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 """
 # pylint: disable=too-few-public-methods
 
+import codecs
 import os
 import re
-import codecs
 from collections import defaultdict
 
 from attrdict import AttrDict
@@ -31,12 +31,12 @@ from ldraw.colour import Colour
 from ldraw.config import get_config
 from ldraw.geometry import Matrix, Vector
 from ldraw.lines import (
+    Comment,
+    Line,
+    MetaCommand,
     OptionalLine,
     Quadrilateral,
-    Line,
     Triangle,
-    MetaCommand,
-    Comment,
 )
 from ldraw.pieces import Piece
 

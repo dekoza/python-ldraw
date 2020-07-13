@@ -1,10 +1,9 @@
 """
 takes care of reading and writing a configuration in config.yml
 """
-import os
+import sys
 from os.path import join
 
-import sys
 import yaml
 
 from ldraw.dirs import get_config_dir, get_data_dir
@@ -21,7 +20,7 @@ def get_config():
     try:
         config = yaml.load(open(get_config_file_path(), "r"), Loader=yaml.SafeLoader)
         return config
-    except (OSError, yaml.YAMLError, IOError, EnvironmentError) as e:
+    except (OSError, yaml.YAMLError, IOError, EnvironmentError):
         return {"parts.lst": join(data_dir, "ldraw", "parts.lst")}
 
 

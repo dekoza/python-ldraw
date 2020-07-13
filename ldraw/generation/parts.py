@@ -3,15 +3,15 @@
 Generates the ldraw.library.parts namespace
 """
 import codecs
-import os
 import itertools
+import os
 
-from progress.bar import Bar
 import pystache
+from progress.bar import Bar
 
-from ldraw.resources import get_resource
-from ldraw.utils import clean, camel, ensure_exists, flatten
 from ldraw.parts import PartError
+from ldraw.resources import get_resource
+from ldraw.utils import camel, clean, ensure_exists, flatten
 
 PARTS__INIT__TEMPLATE = get_resource(
     os.path.join("templates", "parts__init__.mustache")

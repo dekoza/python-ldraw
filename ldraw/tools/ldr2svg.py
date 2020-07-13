@@ -23,11 +23,11 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 import argparse
 
 from ldraw.tools import (
-    widthxheight,
-    vector_position,
-    get_model,
     get_coordinate_system,
+    get_model,
+    vector_position,
     verify_camera_look_at,
+    widthxheight,
 )
 from ldraw.writers.svg import SVGArgs
 
@@ -35,7 +35,7 @@ from ldraw.writers.svg import SVGArgs
 def main():
     """ ldr2svg main function """
     description = """Converts the LDraw file to a SVG file.
-    
+
 The viewport size is specified as a pair of floating point numbers representing
 lengths in LDraw scene coordinates separated by an \"x\" character.
 

@@ -1,5 +1,6 @@
-from ldraw.utils import clean
 import random
+
+from ldraw.utils import clean
 
 
 def test_clean():

@@ -2,7 +2,7 @@ import os
 import tempfile
 
 import yaml
-from mock import patch, mock_open
+from mock import mock_open, patch
 from yaml import YAMLError
 
 from ldraw.config import get_config, write_config
